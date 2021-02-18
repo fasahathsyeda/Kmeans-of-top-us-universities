@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+  </head>
+
+  <body style="background-color: seashell;">
+
+    <!-- D3 -->
+    <script src="js/d3/d3.min.js"></script>
+    <!-- jQuery for some animations and UI stuff -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- TopoJSON for the map -->
+    <script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+    
+
+    
+
+    <!-- Title -->
+    <div class="title-header" style="font-size: 30px"><i>K</i>-Means Clustering of Top 650 U.S. Universities and Colleges</div>
+    <!-- Subtitle -->
+    <div class="title-subheader">Select 2 parameters to cluster by</div>
+
+
+    <!-- Clustering buttons -->
+    <div type="button" class="btn cluster-btn admin" style="width: 150px;" data="admissions_info">Admissions Rate</div>
+    <div class="btn cluster-btn sat" data="score_info">SAT Score</div>
+    <div class="btn cluster-btn salary" style="width: 300px;" data="salary_info">Median Mid-Career Salary</div>
+
+    <!-- <button id="filter-btn" type="button" class="start-cluster">Cluster</button> -->
+    
+    <div class="start-cluster">Cluster</div>
+    <div class="reset-btn" style="margin-left: 20px;">Reset</div>
+    <div class="all-state-btn" style="margin-left: 20px; width:120px;">Select All States</div>
+
+
+
+
+    <div class="title-subheader" style="clear: both;">Click on states whose universities you'd like to cluster</div>
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+
+    <svg width="1650" height="600" id="mapSVG">
+           <text x="675" y="55" id="univName">Interactive: hover over any circle on map or graph</text>
+       <text x="675" y="75" id="univInfo"></text>
+    </svg>
+
+      </div>
+    </div>
+
+
+    <!-- Title -->
+    <div class="title-header" style="font-size: 30px; margin-bottom: 30px; padding-top: 30px;">Linear Regressions of Various University Parameters</div>
+    <!-- Linear regression graphs  -->
+    <svg width="1650" height="650" id="linRegSVG"></svg>
+    <br>
+
+    <h1><strong> Use our predictor to see which college you can get into</strong></h1>
+    <br>
+
+    <form id="form">
+
+      <label id="label1" for="label1">Enter SAT score:</label>
+      <input class="input1" id="first_val" type="text">
+  
+      <label id="label2" for="label2">Enter acceptance rate:</label>
+      <input class="input2" id="second_val" type="text">
+  
+      <button id="filter-btn" type="button" class="btn btn-default">Predict</button>
+      <br>
+    </form>
+
+    <div id="table-area" class="">
+      <table id="ucollegefo-table" class="table table-striped">
+        <thead>
+          <tr>
+            <th class="table-head">Rank</th>
+            <th class="table-head">Name</th>
+            <th class="table-head">State</th>
+            <th class="table-head">Link</th>
+            <th class="table-head">SAT Mean score</th>
+            <th class="table-head">Acceptance Rate</th>
+            <th class="table-head">Students</th>
+            <th class="table-head">Mid Career Median Salary</th>
+
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    
+
+    
+
+    
+
+
+    <!-- k-means clustering functions  -->
+    <script type="text/javascript" src="js/kcluster.js"></script>
+    <!-- linear regression functions  -->
+    <script type="text/javascript" src="js/linreg.js"></script>
+    <script type="text/javascript" src="js/logic.js"></script>
+    <script type="text/javascript" src="js/predict.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,212 @@
+
+      /* Overall HTML */
+      html {
+        font-family: "Arial" !important;
+      }
+
+
+      /* SVG styling + drawing animation */
+      svg {
+        fill: #80ccff; 
+        stroke: #438ecc; /* black path */
+          stroke-dasharray: 2000px;
+          stroke-dashoffset: 2000px;
+          animation-name: draw;
+          animation-duration: 3s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-timing-function: linear;
+
+        border:1px black; /*temporary*/
+      }
+
+
+      /* University circle styling */
+      circle {
+        stroke: white;
+        stroke-width:1.4px;
+      }
+
+
+      /* Map circle (university mapping) styling */
+      .map-circle {
+
+      }
+
+
+      /* Drawing animation on startup */
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+
+      /* US Map styling */
+      #mapSVG, #linRegSVG {
+        margin-left: -200px;
+        margin-top: -5px;
+      }
+
+
+      /* General SVG text styling */
+      text, .graph-text {
+        fill: #000000;
+        stroke: #000000;
+        font-size:70%;
+      }
+
+
+      /* University info name styling */
+      #univName {
+          fill: #2cdb52;
+        stroke: #022e05;
+        stroke-width:0.3px;
+        font-size:110%;
+        text-anchor:middle;
+      }
+
+
+      /* University info text styling */
+      #univInfo {
+        stroke-width: 0.3px;
+        text-anchor: middle;
+        font-size: 75%;
+      }
+
+
+      /* Clustering styling */
+      .clustering {
+        border: solid black 1px;
+      }
+
+
+      /* Axes styling (courtesy of https://bl.ocks.org/mbostock/3887118 example) */
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: ;
+        shape-rendering: crispEdges;
+      }
+
+
+      /* Graph text size change */
+      .graph-text {
+        font-size: 45%;
+      }
+
+      /* Button styling achieved through using this tool: http://css3buttongenerator.com/ */
+
+      /* Clustering button styling */
+      .btn {
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 17px;
+        background: #80ccff;
+        padding: 7px 17px 7px 17px;
+        text-decoration: none;
+        text-align: center;
+        cursor:pointer;
+      }
+
+
+      /* Button hover styling */
+      .btn:hover {
+        background: #003d66;
+        text-decoration: none;
+      }
+
+
+      /* Clustering button layout */
+      .cluster-btn {
+        width: 120px;
+        margin-left: 50px;
+        margin-top: 30px;
+        float: left;
+        margin-bottom: 20px;
+        cursor:pointer;
+      }
+
+      .start-cluster, .reset-btn, .all-state-btn {
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 10px;
+        border-color: #80ccff;
+        border: 1px solid;
+        width: 60px;
+        padding: 7px 27px 7px 27px;
+        margin-left: 75px;
+        margin-top: 30px;
+        float: left;
+        color: #80ccff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px;
+        cursor: pointer;
+        font-size: 16px
+      }
+
+      .start-cluster:hover, .reset-btn:hover, .all-state-btn:hover {
+        color: #003d66;
+        text-decoration: none;
+      }
+
+
+
+      /* Header styling */
+      .title-header, .closing-title {
+        font-size: 150%;
+        margin-left: 50px;
+        margin-top: 10px;
+        color: #003d66;
+        clear: both;
+      }
+
+
+      /* Sub-header styling */
+      .title-subheader {
+        font-size: 120%;
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+
+      .closing-title {
+        text-align: left;
+      }
+
+      .closing-statement, .last-closing-statement {
+        text-align: left;
+        margin-left: 60px;
+        font-size: 13px;
+        margin-top: 30px;
+        color: #003d66;
+
+      }
+
+      .last-closing-statement {
+        margin-bottom: 200px;
+      }
+
+      #table-area th {
+        text-align: center;
+      }
+      
+      #table-area th:first-child,
+      #table-area th:nth-child(2),
+      #table-area th:nth-child(6) {
+        min-width: 70px;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+      }
+      table {
+        border-spacing: 5px;
+      }
+
